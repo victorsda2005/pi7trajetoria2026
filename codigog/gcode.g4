@@ -31,9 +31,11 @@ numerolinha
 	:	'N' NUMBER
 	;
 
-num3dig : NUMBER NUMBER NUMBER ;
+num3dig 
+	: NUMBER NUMBER NUMBER ;
 
-mfim 	:	'M30'
+mfim 	
+	:	'M30'
 	;
 	
 mfunc 
@@ -41,15 +43,18 @@ mfunc
 	|	'M01' STRING
 	;
 	
-codfunc :	'G01'
+codfunc 
+	:	'G01'
 	|	'G00'
 	|   'G02'
 	;
 	
-coordx 	:	'X'coord
+coordx 	
+	: 'X'coord
 	;
 
-coordy 	:	 'Y'coord
+coordy 	
+	: 'Y'coord
 	;
 		
 coordi
@@ -60,10 +65,12 @@ coordj
     : 'J' coord
     ;
 
-coord   :       NUMBER
-        ;
+coord   
+	: NUMBER
+    ;
 
-fimdelinha :	'\r\n'
+fimdelinha 
+	:	'\r\n'
 	|	'\n'
 	;
 			
@@ -71,7 +78,8 @@ NUMBER : '-'? [0-9]+ ;
 	
 WS : [ \t\r\n]+ -> skip ;
 	
-STRING  :  '"' ( ESC_SEQ | ~('\\'|'"') )* '"'
+STRING  
+	:  '"' ( ESC_SEQ | ~('\\'|'"') )* '"'
     ;
 
 fragment

@@ -1,7 +1,6 @@
 import math
 import numpy as np
 
-
 class GeradorTrajetoria:
 
     def __init__(self):
@@ -39,7 +38,7 @@ class GeradorTrajetoria:
 
     def reta(self, x_final, y_final,
              tf=14,
-             n=25):
+             n=10):
 
         x0 = self.x_atual
         y0 = self.y_atual
@@ -50,6 +49,9 @@ class GeradorTrajetoria:
 
             x = x0 + (x_final-x0)*s
             y = y0 + (y_final-y0)*s
+
+            x = int(x)
+            y = int(y)
 
             self.tabela.append((x,y))
 
@@ -95,6 +97,9 @@ class GeradorTrajetoria:
             x = cx + raio*math.cos(theta)
             y = cy + raio*math.sin(theta)
 
+            x = int(x)
+            y = int(y)
+            
             self.tabela.append((x,y))
 
         self.x_atual = x_final

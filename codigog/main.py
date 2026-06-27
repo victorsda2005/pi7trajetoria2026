@@ -16,7 +16,7 @@ def main():
 
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-    arquivo = os.path.join(BASE_DIR, "codigocurva.gcode")
+    arquivo = os.path.join(BASE_DIR, "codigoreta.gcode")
 
     input_stream = FileStream(arquivo)
 
