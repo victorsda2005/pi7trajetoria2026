@@ -71,6 +71,11 @@ def main():
 
     tabela = gerador.gerar(movimentos)
 
+    with open("trajetoria.txt", "w") as arquivo:
+
+        for x, y in tabela:
+            arquivo.write(f"{round(x)} {round(y)}\n")
+
     ####################################################
     # Exibe a tabela
     ####################################################
